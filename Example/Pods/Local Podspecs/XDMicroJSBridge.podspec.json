@@ -1,0 +1,22 @@
+{
+  "name": "XDMicroJSBridge",
+  "version": "0.1.0",
+  "summary": "A short description of XDMicroJSBridge.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/458770054@qq.com/XDMicroJSBridge",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "458770054@qq.com": "danecai@webank.com"
+  },
+  "source": {
+    "git": "https://github.com/458770054@qq.com/XDMicroJSBridge.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "XDMicroJSBridge/Classes/**/*"
+}

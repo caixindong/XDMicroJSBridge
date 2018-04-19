@@ -1,0 +1,16 @@
+PODS:
+  - XDMicroJSBridge (0.1.0)
+
+DEPENDENCIES:
+  - XDMicroJSBridge (from `../`)
+
+EXTERNAL SOURCES:
+  XDMicroJSBridge:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  XDMicroJSBridge: 26a9ec4524d49c772e3bdc6d111d5546ef5df998
+
+PODFILE CHECKSUM: 79c2c0336055aae9b82221aa5df47635b98b6af4
+
+COCOAPODS: 1.5.0
