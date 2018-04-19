@@ -7,14 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		192D4EB44646D2BD6D50607DC0309F3B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		29EA29B86B68ED1A2964FCE902AD0832 /* Pods-XDMicroJSBridge_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F635449A3D2D61673E88F4C6CFAA6F4 /* Pods-XDMicroJSBridge_Example-dummy.m */; };
-		50A6E00272BD7D7DEC17F26450FA679B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		5387F506E1210459F67C81A908DDCAC3 /* XDMicroJSBridge-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A9E925E9C89AFA1F720B729F94DD69C1 /* XDMicroJSBridge-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3299806A43655E28E679C992A48BD9D5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C90BC3573BAE3A795C34008364BF7925 /* Foundation.framework */; };
+		3B4C5FAA42E6C0338A87C7758D7E68E0 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A0D2FE2B34A08F1450C6D7200B8054B /* JavaScriptCore.framework */; };
+		47E2CDBCF8E3C7339E8BFB007DE01AE9 /* XDMicroJSBridge-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E8542971A1833163891FB7002B227C8 /* XDMicroJSBridge-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		50A6E00272BD7D7DEC17F26450FA679B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C90BC3573BAE3A795C34008364BF7925 /* Foundation.framework */; };
+		52E3CEF7B1F8FAE6785F1DBD8BADEA44 /* XDMicroJSBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EFAF46A7E8C6BC25EE8109A53940CDD /* XDMicroJSBridge.m */; };
 		63F570A88E3FD455EDD9812F37F8E7AD /* Pods-XDMicroJSBridge_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CAE6DB828169BA07BE670CDC3D30F118 /* Pods-XDMicroJSBridge_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		89DF56B75CEFA6A3C6EB332D01F3519C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		C54F94A5BC9EEC5ED59B9EE90D9ED395 /* XDMicroJSBridge-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B5BBE82F704F7BDEBD6F20726A4BE78 /* XDMicroJSBridge-dummy.m */; };
-		E29428F3330AABB0945966002D551A9F /* ReplaceMe.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A089C79CD94BD88677D6B082264FF96 /* ReplaceMe.m */; };
+		726534EA6E65CFBB24057B4F7C4CCAE4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5ED130529D147C6D88E2C055883E98DF /* UIKit.framework */; };
+		89DF56B75CEFA6A3C6EB332D01F3519C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C90BC3573BAE3A795C34008364BF7925 /* Foundation.framework */; };
+		9713BBD8D2B7343098C1A5DD66804364 /* XDMicroJSBridge-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 64B69F1F2A7186249B71B7C947A088C1 /* XDMicroJSBridge-dummy.m */; };
+		C357BC01C70012C44BB7E7D2846A5E3D /* XDMicroJSBridge.h in Headers */ = {isa = PBXBuildFile; fileRef = 25320D85ABBF1EFC8AB720CD7E1C9B6B /* XDMicroJSBridge.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E39641FBC4560A9A05D360E7E434A3A8 /* Pods-XDMicroJSBridge_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = ACA050BF3AA46B7DE47F393DB54AD9B1 /* Pods-XDMicroJSBridge_Tests-dummy.m */; };
 		EF09FFA3F01C3709DE599ABE4BBE5599 /* Pods-XDMicroJSBridge_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AF80775396A43D12B19E142EB181376D /* Pods-XDMicroJSBridge_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
@@ -37,49 +40,54 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		077BDB3CB5EBA58295D21B2A79C1BC7D /* XDMicroJSBridge-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "XDMicroJSBridge-prefix.pch"; sourceTree = "<group>"; };
 		0AFEEC0B7BBDD37F0391FD7A1A6067A2 /* XDMicroJSBridge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = XDMicroJSBridge.framework; path = XDMicroJSBridge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B1FFCB738C7ACA65A4D6B5A1DB59A36 /* Pods-XDMicroJSBridge_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-XDMicroJSBridge_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		0F146CD35EED9D3EE5E9973B0148CE20 /* XDMicroJSBridge.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = XDMicroJSBridge.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		0E8542971A1833163891FB7002B227C8 /* XDMicroJSBridge-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "XDMicroJSBridge-umbrella.h"; sourceTree = "<group>"; };
+		14166D713008C2F6BAD042893D878F94 /* XDMicroJSBridge.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = XDMicroJSBridge.modulemap; sourceTree = "<group>"; };
 		181C0ED878298BD5F7F5274CC2921891 /* Pods-XDMicroJSBridge_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-XDMicroJSBridge_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		29C14DD2A92EA1E8040D4EF6C80FE173 /* XDMicroJSBridge.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = XDMicroJSBridge.modulemap; sourceTree = "<group>"; };
-		2A089C79CD94BD88677D6B082264FF96 /* ReplaceMe.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ReplaceMe.m; path = XDMicroJSBridge/Classes/ReplaceMe.m; sourceTree = "<group>"; };
+		25320D85ABBF1EFC8AB720CD7E1C9B6B /* XDMicroJSBridge.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = XDMicroJSBridge.h; path = XDMicroJSBridge/Classes/XDMicroJSBridge.h; sourceTree = "<group>"; };
 		31F8437A4C794C94C5AEF8FD7A6F31F4 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3B5BBE82F704F7BDEBD6F20726A4BE78 /* XDMicroJSBridge-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "XDMicroJSBridge-dummy.m"; sourceTree = "<group>"; };
+		3A0D2FE2B34A08F1450C6D7200B8054B /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
 		3D15C16C8D6BCE8A69C4E126BA02B2FA /* Pods-XDMicroJSBridge_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-XDMicroJSBridge_Tests-resources.sh"; sourceTree = "<group>"; };
+		4EFAF46A7E8C6BC25EE8109A53940CDD /* XDMicroJSBridge.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = XDMicroJSBridge.m; path = XDMicroJSBridge/Classes/XDMicroJSBridge.m; sourceTree = "<group>"; };
 		4FC4A8AD038D504F193DB6297502AC7F /* Pods-XDMicroJSBridge_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-XDMicroJSBridge_Example.modulemap"; sourceTree = "<group>"; };
 		53C72196E3B1F71487378276BD6C6999 /* Pods_XDMicroJSBridge_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_XDMicroJSBridge_Example.framework; path = "Pods-XDMicroJSBridge_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		54F29D28B6E02F361D8051EC5F3ECAD5 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		560847A73EE599DC88BDD80E823478A7 /* Pods-XDMicroJSBridge_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-XDMicroJSBridge_Tests.modulemap"; sourceTree = "<group>"; };
-		5973E5F2C8447FE241CB405BF700F2C7 /* XDMicroJSBridge-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "XDMicroJSBridge-prefix.pch"; sourceTree = "<group>"; };
-		6044C32DD3A26D04016C9F460F978799 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
-		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		5ED130529D147C6D88E2C055883E98DF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		64B69F1F2A7186249B71B7C947A088C1 /* XDMicroJSBridge-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "XDMicroJSBridge-dummy.m"; sourceTree = "<group>"; };
+		6CFB5013E9555BD826A193C0E8E5B395 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7E1D31490287A0005D4F0DED95E89DF1 /* Pods-XDMicroJSBridge_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-XDMicroJSBridge_Example-resources.sh"; sourceTree = "<group>"; };
 		8F635449A3D2D61673E88F4C6CFAA6F4 /* Pods-XDMicroJSBridge_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-XDMicroJSBridge_Example-dummy.m"; sourceTree = "<group>"; };
+		902AFD5D7318A119CAAD04D0C8262462 /* XDMicroJSBridge.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = XDMicroJSBridge.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		98AF8E921639B260249B0419F3CA7B41 /* Pods_XDMicroJSBridge_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_XDMicroJSBridge_Tests.framework; path = "Pods-XDMicroJSBridge_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		A9E925E9C89AFA1F720B729F94DD69C1 /* XDMicroJSBridge-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "XDMicroJSBridge-umbrella.h"; sourceTree = "<group>"; };
-		ABBB3F9AE0C97E5C890513380E49D271 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		A4BE1E0727D99991B400618052A30965 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		ABEFCA971BACB8CD915ABDD7D4C27B21 /* Pods-XDMicroJSBridge_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-XDMicroJSBridge_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		ACA050BF3AA46B7DE47F393DB54AD9B1 /* Pods-XDMicroJSBridge_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-XDMicroJSBridge_Tests-dummy.m"; sourceTree = "<group>"; };
 		AF80775396A43D12B19E142EB181376D /* Pods-XDMicroJSBridge_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-XDMicroJSBridge_Tests-umbrella.h"; sourceTree = "<group>"; };
 		B8A495C938653D4F56F9AEAD285AFCD1 /* Pods-XDMicroJSBridge_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-XDMicroJSBridge_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		BA49D591CD27AE1665CCCA316EFB98A5 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		C524B87D027A4053833E13B8252817B4 /* Pods-XDMicroJSBridge_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-XDMicroJSBridge_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		C90BC3573BAE3A795C34008364BF7925 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		CAE6DB828169BA07BE670CDC3D30F118 /* Pods-XDMicroJSBridge_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-XDMicroJSBridge_Example-umbrella.h"; sourceTree = "<group>"; };
 		D40783A2B3C3B91EA48B395B6C0BBAEA /* Pods-XDMicroJSBridge_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-XDMicroJSBridge_Example.release.xcconfig"; sourceTree = "<group>"; };
 		D4545B151465C0B758AE451514971B49 /* Pods-XDMicroJSBridge_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-XDMicroJSBridge_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		DE7F442CDD013C97CE9E9D833D05AC38 /* Pods-XDMicroJSBridge_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-XDMicroJSBridge_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		E1155A071693AF877B175847D3544F1F /* Pods-XDMicroJSBridge_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-XDMicroJSBridge_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		EF2E72D381C36DE9AD05F4B4648B6E94 /* XDMicroJSBridge.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = XDMicroJSBridge.xcconfig; sourceTree = "<group>"; };
-		F06D8722D681B7D42D94E07C14D077FC /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E6F27F4975B9720012ED08BE87917CB9 /* XDMicroJSBridge.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = XDMicroJSBridge.xcconfig; sourceTree = "<group>"; };
 		F4A845C032D6E729EC5C5D395AA14906 /* Pods-XDMicroJSBridge_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-XDMicroJSBridge_Example-frameworks.sh"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		A108F1CF3B165855764200D16EDF74FD /* Frameworks */ = {
+		23A4C162E9F5D2F525C7C23A6FF6F2E8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				192D4EB44646D2BD6D50607DC0309F3B /* Foundation.framework in Frameworks */,
+				3299806A43655E28E679C992A48BD9D5 /* Foundation.framework in Frameworks */,
+				3B4C5FAA42E6C0338A87C7758D7E68E0 /* JavaScriptCore.framework in Frameworks */,
+				726534EA6E65CFBB24057B4F7C4CCAE4 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,6 +110,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0C8519BB96B11F30E925F4C7907F4A3D /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				438FCF70388E1B3BC53AD177F52C6895 /* XDMicroJSBridge */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		122DA2E5084A4393C29BE363C764795C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5D7C60F5D2BEE19CA8A343B0AF7FC36D /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		1E5A5300AD9C1EE013066D404AFC5DE3 /* Pods-XDMicroJSBridge_Example */ = {
 			isa = PBXGroup;
 			children = (
@@ -120,14 +144,16 @@
 			path = "Target Support Files/Pods-XDMicroJSBridge_Example";
 			sourceTree = "<group>";
 		};
-		1F2CC8350A96321220F411DE22A06073 /* Pod */ = {
+		438FCF70388E1B3BC53AD177F52C6895 /* XDMicroJSBridge */ = {
 			isa = PBXGroup;
 			children = (
-				ABBB3F9AE0C97E5C890513380E49D271 /* LICENSE */,
-				6044C32DD3A26D04016C9F460F978799 /* README.md */,
-				0F146CD35EED9D3EE5E9973B0148CE20 /* XDMicroJSBridge.podspec */,
+				25320D85ABBF1EFC8AB720CD7E1C9B6B /* XDMicroJSBridge.h */,
+				4EFAF46A7E8C6BC25EE8109A53940CDD /* XDMicroJSBridge.m */,
+				F4B8670D5CD7B9DFE0A8D5CF3BB6F488 /* Pod */,
+				8B8E37824D7DB98C0785BDCE6DCFC1F8 /* Support Files */,
 			);
-			name = Pod;
+			name = XDMicroJSBridge;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 		5556FC53144BACB60B49AA54794C561C /* Products */ = {
@@ -138,6 +164,16 @@
 				0AFEEC0B7BBDD37F0391FD7A1A6067A2 /* XDMicroJSBridge.framework */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		5D7C60F5D2BEE19CA8A343B0AF7FC36D /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				C90BC3573BAE3A795C34008364BF7925 /* Foundation.framework */,
+				3A0D2FE2B34A08F1450C6D7200B8054B /* JavaScriptCore.framework */,
+				5ED130529D147C6D88E2C055883E98DF /* UIKit.framework */,
+			);
+			name = iOS;
 			sourceTree = "<group>";
 		};
 		5FF7EEF298412BE63F048792F8499A28 /* Pods-XDMicroJSBridge_Tests */ = {
@@ -158,45 +194,29 @@
 			path = "Target Support Files/Pods-XDMicroJSBridge_Tests";
 			sourceTree = "<group>";
 		};
-		6A9E1B71FA53F632D72F92D2C9E5CBCE /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				F06D8722D681B7D42D94E07C14D077FC /* Info.plist */,
-				29C14DD2A92EA1E8040D4EF6C80FE173 /* XDMicroJSBridge.modulemap */,
-				EF2E72D381C36DE9AD05F4B4648B6E94 /* XDMicroJSBridge.xcconfig */,
-				3B5BBE82F704F7BDEBD6F20726A4BE78 /* XDMicroJSBridge-dummy.m */,
-				5973E5F2C8447FE241CB405BF700F2C7 /* XDMicroJSBridge-prefix.pch */,
-				A9E925E9C89AFA1F720B729F94DD69C1 /* XDMicroJSBridge-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/XDMicroJSBridge";
-			sourceTree = "<group>";
-		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				A2BD541B77EE236DF8C0A72E91B0579E /* Development Pods */,
-				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				0C8519BB96B11F30E925F4C7907F4A3D /* Development Pods */,
+				122DA2E5084A4393C29BE363C764795C /* Frameworks */,
 				5556FC53144BACB60B49AA54794C561C /* Products */,
 				C046777415FF9F138AFA62CAFCB064DE /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		A2BD541B77EE236DF8C0A72E91B0579E /* Development Pods */ = {
+		8B8E37824D7DB98C0785BDCE6DCFC1F8 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				C11E98C19090DE0CCAD508B2AD6D73E2 /* XDMicroJSBridge */,
+				6CFB5013E9555BD826A193C0E8E5B395 /* Info.plist */,
+				14166D713008C2F6BAD042893D878F94 /* XDMicroJSBridge.modulemap */,
+				E6F27F4975B9720012ED08BE87917CB9 /* XDMicroJSBridge.xcconfig */,
+				64B69F1F2A7186249B71B7C947A088C1 /* XDMicroJSBridge-dummy.m */,
+				077BDB3CB5EBA58295D21B2A79C1BC7D /* XDMicroJSBridge-prefix.pch */,
+				0E8542971A1833163891FB7002B227C8 /* XDMicroJSBridge-umbrella.h */,
 			);
-			name = "Development Pods";
-			sourceTree = "<group>";
-		};
-		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				D35AF013A5F0BAD4F32504907A52519E /* iOS */,
-			);
-			name = Frameworks;
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/XDMicroJSBridge";
 			sourceTree = "<group>";
 		};
 		C046777415FF9F138AFA62CAFCB064DE /* Targets Support Files */ = {
@@ -208,33 +228,25 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		C11E98C19090DE0CCAD508B2AD6D73E2 /* XDMicroJSBridge */ = {
+		F4B8670D5CD7B9DFE0A8D5CF3BB6F488 /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				2A089C79CD94BD88677D6B082264FF96 /* ReplaceMe.m */,
-				1F2CC8350A96321220F411DE22A06073 /* Pod */,
-				6A9E1B71FA53F632D72F92D2C9E5CBCE /* Support Files */,
+				A4BE1E0727D99991B400618052A30965 /* LICENSE */,
+				BA49D591CD27AE1665CCCA316EFB98A5 /* README.md */,
+				902AFD5D7318A119CAAD04D0C8262462 /* XDMicroJSBridge.podspec */,
 			);
-			name = XDMicroJSBridge;
-			path = ../..;
-			sourceTree = "<group>";
-		};
-		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */,
-			);
-			name = iOS;
+			name = Pod;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		51E5699D15C4A3E26AB1BAB45E0E745B /* Headers */ = {
+		1DD80BC7A738AD50652D029029230014 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5387F506E1210459F67C81A908DDCAC3 /* XDMicroJSBridge-umbrella.h in Headers */,
+				47E2CDBCF8E3C7339E8BFB007DE01AE9 /* XDMicroJSBridge-umbrella.h in Headers */,
+				C357BC01C70012C44BB7E7D2846A5E3D /* XDMicroJSBridge.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,9 +291,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AFCCE2852C7929026280E39133AA1935 /* Build configuration list for PBXNativeTarget "XDMicroJSBridge" */;
 			buildPhases = (
-				5E3890E2C08300C8769F97CAD1A47566 /* Sources */,
-				A108F1CF3B165855764200D16EDF74FD /* Frameworks */,
-				51E5699D15C4A3E26AB1BAB45E0E745B /* Headers */,
+				4929D77B3CC8147673EED3B6D3E99922 /* Sources */,
+				23A4C162E9F5D2F525C7C23A6FF6F2E8 /* Frameworks */,
+				1DD80BC7A738AD50652D029029230014 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -339,12 +351,12 @@
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		5E3890E2C08300C8769F97CAD1A47566 /* Sources */ = {
+		4929D77B3CC8147673EED3B6D3E99922 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E29428F3330AABB0945966002D551A9F /* ReplaceMe.m in Sources */,
-				C54F94A5BC9EEC5ED59B9EE90D9ED395 /* XDMicroJSBridge-dummy.m in Sources */,
+				9713BBD8D2B7343098C1A5DD66804364 /* XDMicroJSBridge-dummy.m in Sources */,
+				52E3CEF7B1F8FAE6785F1DBD8BADEA44 /* XDMicroJSBridge.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -480,7 +492,7 @@
 		};
 		A7AE05164C590635D83CB1121DBB9884 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EF2E72D381C36DE9AD05F4B4648B6E94 /* XDMicroJSBridge.xcconfig */;
+			baseConfigurationReference = E6F27F4975B9720012ED08BE87917CB9 /* XDMicroJSBridge.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -669,7 +681,7 @@
 		};
 		EBD7DCE037DF2CEA1330803F47C8DE93 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EF2E72D381C36DE9AD05F4B4648B6E94 /* XDMicroJSBridge.xcconfig */;
+			baseConfigurationReference = E6F27F4975B9720012ED08BE87917CB9 /* XDMicroJSBridge.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";

@@ -21,22 +21,16 @@ Pod::Spec.new do |s|
 TODO: Add long description of the pod here.
                        DESC
 
-  s.homepage         = 'https://github.com/458770054@qq.com/XDMicroJSBridge'
+  s.homepage         = 'https://github.com/caixindong/XDMicroJSBridge'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { '458770054@qq.com' => 'danecai@webank.com' }
-  s.source           = { :git => 'https://github.com/458770054@qq.com/XDMicroJSBridge.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.author           = { '458770054@qq.com' => '458770054@qq.com' }
+  s.source           = { :git => 'https://github.com/caixindong/XDMicroJSBridge.git', :tag => s.version.to_s }
 
   s.ios.deployment_target = '8.0'
 
   s.source_files = 'XDMicroJSBridge/Classes/**/*'
-  
-  # s.resource_bundles = {
-  #   'XDMicroJSBridge' => ['XDMicroJSBridge/Assets/*.png']
-  # }
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.public_header_files = 'XDMicroJSBridge/Classes/**/*.h'
+  s.frameworks = 'UIKit', 'JavaScriptCore'
 end
