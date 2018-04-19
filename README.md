@@ -4,7 +4,7 @@
 [![Version](https://img.shields.io/cocoapods/v/XDMicroJSBridge.svg?style=flat)](http://cocoapods.org/pods/XDMicroJSBridge)
 [![License](https://img.shields.io/cocoapods/l/XDMicroJSBridge.svg?style=flat)](http://cocoapods.org/pods/XDMicroJSBridge)
 [![Platform](https://img.shields.io/cocoapods/p/XDMicroJSBridge.svg?style=flat)](http://cocoapods.org/pods/XDMicroJSBridge)
-
+A most simple iOS bridge for communication between Obj-C and JavaScript in UIWebViews 
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
