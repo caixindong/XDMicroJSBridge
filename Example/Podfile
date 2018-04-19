@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'XDMicroJSBridge_Example' do
+  pod 'XDMicroJSBridge', :path => '../'
+
+  target 'XDMicroJSBridge_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
