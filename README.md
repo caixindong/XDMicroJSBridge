@@ -24,13 +24,15 @@ pod 'XDMicroJSBridge'
 #import "XDMicroJSBridge.h"
 @property (nonatomic, strong) UIWebView *webview;
 @property (nonatomic, strong) XDMicroJSBridge *bridge;
+@property (nonatomic, copy) XDMCJSBCallback callback;
 self.bridge = [XDMicroJSBridge bridgeForWebView:_webview];
 ```
 ### Register methods
 ```objC
 __weak typeof(self) weakself = self;
-    [_bridge registerAction:@"camerapicker" handler:^(NSArray *params, XDMCJSBCallback callback) {
+[_bridge registerAction:@"camerapicker" handler:^(NSArray *params, XDMCJSBCallback callback) {
         dispatch_async(dispatch_get_main_queue(), ^{
+            //if your javaScript method has callback, you should register this call like this.
             if (callback) {
                 weakself.callback = callback;
             }
@@ -41,13 +43,11 @@ __weak typeof(self) weakself = self;
         });
     }];
 ```
-### Call methods in JavaScript
+### Call methods in javaScript
 ```javaScript
 <script>
-// 调起相机
     function clickcamera() {
         XDMCBridge.camerapicker(function (response) {
-            //response['photos']：回调回来的照片数组
             var photos = response['photos'];
             var insert = document.getElementById('insert');
             for(var i = 0; i < photos.length; i++) {
