@@ -68,4 +68,9 @@
     }
 }
 
+- (void)setNameSpace:(NSString *)nameSpace {
+    _nameSpace = nameSpace;
+    _context[_nameSpace] = @{};
+}
+
 @end
