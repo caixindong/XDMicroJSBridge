@@ -29,6 +29,8 @@
     _context = [_webView valueForKeyPath:@"documentView.webView.mainFrame.javaScriptContext"];
     _nameSpace = @"XDMCBridge";
     _context[_nameSpace] = @{};
+    //解决callback同步问题（会阻塞线程）
+    [_context evaluateScript:@"function asyncallback(callback,params) {if(typeof callback == 'function'){setTimeout(function () {callback(params);},0);}}"];
 }
 
 - (void)registerAction:(NSString *)action handler:(XDMCJSBHandle)handler {
@@ -38,10 +40,16 @@
             JSValue *last = (JSValue *)[args lastObject];
             XDMCJSBCallback ncallback = nil;
             NSMutableArray *trueArgs = [NSMutableArray arrayWithArray:args];
+            //context这样引用才不会会循环引用
+            JSContext *currentContext = [JSContext currentContext];
             if ([last isObject] && [[last toDictionary] isEqualToDictionary:@{}]) {
                 [trueArgs removeLastObject];
                 ncallback = ^(NSDictionary *params){
-                    [last callWithArguments:@[params]];
+                    //经过测试发现，js执行线程在主线程，所以回调js callback的时候也要回到主线程，如果在其他线程回调callback可能会有野指针carsh
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        JSValue *async = currentContext[@"asyncallback"];
+                        [async callWithArguments:@[last,params]];
+                    });
                 };
             }
             NSMutableArray *trueOCArgs = [NSMutableArray array];
