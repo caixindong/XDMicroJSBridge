@@ -49,7 +49,7 @@
             if ([last isObject] && [[last toDictionary] isEqualToDictionary:@{}]) {
                 [trueArgs removeLastObject];
                 ncallback = ^(NSDictionary *params){
-                    //经过测试发现，js执行线程在主线程，所以回调js callback的时候也要回到主线程，如果在其他线程回调callback可能会有野指针carsh
+                    //如果在其他线程回调callback可能会有野指针carsh，所以callback执行需要回到webThread
                     [strongSelf performSelector:@selector(_callJSMethodWithArgs:) onThread:strongSelf.webThread withObject:@[last, params] waitUntilDone:NO];
                 };
             }
