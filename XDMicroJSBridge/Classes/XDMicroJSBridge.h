@@ -35,6 +35,6 @@ typedef void(^XDMCJSBWebViewDidFailLoad)(UIWebView *webView, NSError *error);
  @param action 函数名
  @param param 函数参数列表
  */
-- (void)callAction:(NSString *)action param:(NSArray *)param;
+- (void)callAction:(NSString *)action param:(NSDictionary *)param;
 
 @end

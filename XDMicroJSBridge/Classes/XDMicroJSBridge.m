@@ -14,6 +14,8 @@
 
 @property (nonatomic, strong) JSContext *context;
 
+@property (nonatomic, strong) NSThread *webThread;
+
 @end
 
 @implementation XDMicroJSBridge
@@ -35,21 +37,20 @@
 
 - (void)registerAction:(NSString *)action handler:(XDMCJSBHandle)handler {
     if (action && handler) {
+        __weak typeof(self) weakSelf = self;
         _context[_nameSpace][action] = ^{
+            __strong typeof(weakSelf) strongSelf = weakSelf;
+            strongSelf.webThread = [NSThread currentThread];
+            NSLog(@"webThread is %@",[NSThread currentThread]);
             NSArray *args = [JSContext currentArguments];
             JSValue *last = (JSValue *)[args lastObject];
             XDMCJSBCallback ncallback = nil;
             NSMutableArray *trueArgs = [NSMutableArray arrayWithArray:args];
-            //context这样引用才不会会循环引用
-            JSContext *currentContext = [JSContext currentContext];
             if ([last isObject] && [[last toDictionary] isEqualToDictionary:@{}]) {
                 [trueArgs removeLastObject];
                 ncallback = ^(NSDictionary *params){
                     //经过测试发现，js执行线程在主线程，所以回调js callback的时候也要回到主线程，如果在其他线程回调callback可能会有野指针carsh
-                    dispatch_async(dispatch_get_main_queue(), ^{
-                        JSValue *async = currentContext[@"asyncallback"];
-                        [async callWithArguments:@[last,params]];
-                    });
+                    [strongSelf performSelector:@selector(_callJSMethodWithArgs:) onThread:strongSelf.webThread withObject:@[last, params] waitUntilDone:NO];
                 };
             }
             NSMutableArray *trueOCArgs = [NSMutableArray array];
@@ -69,10 +70,18 @@
     }
 }
 
-- (void)callAction:(NSString *)action param:(NSArray *)param {
+- (void)_callJSMethodWithArgs:(NSArray *)args {
+    if (args) {
+        NSLog(@"callback thread is %@",[NSThread currentThread]);
+        JSValue *async = _context[@"asyncallback"];
+        [async callWithArguments:args];
+    }
+}
+
+- (void)callAction:(NSString *)action param:(NSDictionary *)param {
     if (action && param) {
         JSValue *jsMethod = _context[action];
-        [jsMethod callWithArguments:param];
+        [self _callJSMethodWithArgs:@[jsMethod, param]];
     }
 }
 
