@@ -27,13 +27,14 @@ pod 'XDMicroJSBridge'
 @property (nonatomic, strong) XDMicroJSBridge *bridge;
 @property (nonatomic, copy) XDMCJSBCallback callback;
 self.bridge = [XDMicroJSBridge bridgeForWebView:_webview];
+//////////////////////////////////////////////////////////
 //if you use WKWebView
 #import "XDMicroJSBridge_WK.h"
 @property (nonatomic, strong) WKWebView *webView;
 @property (nonatomic, strong) XDMicroJSBridge_WK *bridge;
 @property (nonatomic, copy) XDMCJSBCallback callback;
 self.bridge = [[XDMicroJSBridge_WK alloc] init];
-//important tips
+////important tips
 self.webView = [_bridge getBridgeWebView];
 ```
 ### Register methods
