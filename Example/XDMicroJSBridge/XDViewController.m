@@ -9,6 +9,7 @@
 #import "XDViewController.h"
 #import "XDMicroJSBridge.h"
 #import "Base64.h"
+#import "XDViewController_WK.h"
 
 @interface XDViewController ()<UIImagePickerControllerDelegate,UINavigationControllerDelegate>
 
@@ -45,6 +46,7 @@
 - (void)_initWebView {
     self.webview = [[UIWebView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
     [self.view addSubview:_webview];
+    [self.view sendSubviewToBack:_webview];
     
     NSString *htmlPath = [[NSBundle mainBundle] pathForResource:@"test" ofType:@"html"];
     NSString *content = [NSString stringWithContentsOfFile:htmlPath encoding:NSUTF8StringEncoding error:nil];
@@ -93,5 +95,11 @@
 {
     [super didReceiveMemoryWarning];
 }
+
+- (IBAction)wkdemoclick:(UIButton *)sender {
+    XDViewController_WK *vc = [[XDViewController_WK alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
 
 @end

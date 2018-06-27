@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no'>
+
+    </head>
+    <body>
+        <div style="margin-top: 20px">
+            <h2>XDMicroJSBridge_WK</h2>
+            <button onclick='test_05()'>打开相机</button>
+            <div id='insert'></div>
+        </div>
+        <script>
+            function test_05() {
+                XDMCBridge.camera(function(response) {
+                    var photos = response['photos'];
+                    var insert = document.getElementById('insert');
+                    for(var i = 0; i < photos.length; i++) {
+                        var img = new Image(100,100);
+                        img.src = photos[i];
+                        insert.appendChild(img);
+                    }
+                });
+            }
+        </script>
+    </body>
+</html>

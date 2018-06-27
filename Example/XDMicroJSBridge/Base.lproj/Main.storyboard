@@ -20,7 +20,20 @@
                     <view key="view" contentMode="scaleToFill" id="TpU-gO-2f1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Wb-A2-WLo">
+                                <rect key="frame" x="121" y="587" width="132" height="30"/>
+                                <state key="normal" title="WKWebView Demo"/>
+                                <connections>
+                                    <action selector="wkdemoclick:" destination="whP-gf-Uak" eventType="touchUpInside" id="7IJ-ih-V4F"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Mvr-aV-6Um" firstAttribute="top" secondItem="9Wb-A2-WLo" secondAttribute="bottom" constant="50" id="Evh-Jy-ABK"/>
+                            <constraint firstItem="9Wb-A2-WLo" firstAttribute="centerX" secondItem="TpU-gO-2f1" secondAttribute="centerX" id="GHP-8c-JPj"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="WjW-Z3-2Mh"/>
                 </viewController>
