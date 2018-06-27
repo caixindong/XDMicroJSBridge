@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'XDMicroJSBridge'
-  s.version          = '0.2.3'
-  s.summary          = 'A short description of XDMicroJSBridge.'
+  s.version          = '0.3.0'
+  s.summary          = 'A most simple iOS bridge for communication between Obj-C and JavaScript'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+A most simple iOS bridge for communication between Obj-C and JavaScript
                        DESC
 
   s.homepage         = 'https://github.com/caixindong/XDMicroJSBridge'
@@ -32,5 +32,5 @@ TODO: Add long description of the pod here.
   s.source_files = 'XDMicroJSBridge/Classes/**/*'
 
   s.public_header_files = 'XDMicroJSBridge/Classes/**/*.h'
-  s.frameworks = 'UIKit', 'JavaScriptCore'
+  s.frameworks = 'UIKit', 'JavaScriptCore', 'WebKit'
 end
