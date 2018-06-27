@@ -6,8 +6,8 @@
 
     </head>
     <body>
-        <div style="margin-top: 20px">
-            <h2>XDMicroJSBridge_WK</h2>
+        <div>
+            <h1>WKWebView with XDMicroJSBridge_WK</h1>
             <button onclick='test_05()'>打开相机</button>
             <div id='insert'></div>
         </div>
@@ -22,6 +22,9 @@
                         insert.appendChild(img);
                     }
                 });
+            }
+            function nativeClick(info) {
+                alert(info['msg']);
             }
         </script>
     </body>

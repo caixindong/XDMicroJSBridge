@@ -28,11 +28,20 @@
                                     <action selector="wkdemoclick:" destination="whP-gf-Uak" eventType="touchUpInside" id="7IJ-ih-V4F"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dtx-uJ-6tl">
+                                <rect key="frame" x="152" y="547" width="71" height="30"/>
+                                <state key="normal" title="Native Btn"/>
+                                <connections>
+                                    <action selector="nativeBtnClick:" destination="whP-gf-Uak" eventType="touchUpInside" id="1hh-5o-0cE"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="Dtx-uJ-6tl" firstAttribute="centerX" secondItem="TpU-gO-2f1" secondAttribute="centerX" id="4Uh-r5-p8f"/>
                             <constraint firstItem="Mvr-aV-6Um" firstAttribute="top" secondItem="9Wb-A2-WLo" secondAttribute="bottom" constant="50" id="Evh-Jy-ABK"/>
                             <constraint firstItem="9Wb-A2-WLo" firstAttribute="centerX" secondItem="TpU-gO-2f1" secondAttribute="centerX" id="GHP-8c-JPj"/>
+                            <constraint firstItem="9Wb-A2-WLo" firstAttribute="top" secondItem="Dtx-uJ-6tl" secondAttribute="bottom" constant="10" id="VD0-S4-3D5"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="WjW-Z3-2Mh"/>

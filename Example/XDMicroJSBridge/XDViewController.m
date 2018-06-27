@@ -11,7 +11,7 @@
 #import "Base64.h"
 #import "XDViewController_WK.h"
 
-@interface XDViewController ()<UIImagePickerControllerDelegate,UINavigationControllerDelegate>
+@interface XDViewController ()<UIImagePickerControllerDelegate,UINavigationControllerDelegate,UIWebViewDelegate>
 
 @property (nonatomic, strong) UIWebView *webview;
 
@@ -47,6 +47,7 @@
     self.webview = [[UIWebView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
     [self.view addSubview:_webview];
     [self.view sendSubviewToBack:_webview];
+    _webview.delegate = self;
     
     NSString *htmlPath = [[NSBundle mainBundle] pathForResource:@"test" ofType:@"html"];
     NSString *content = [NSString stringWithContentsOfFile:htmlPath encoding:NSUTF8StringEncoding error:nil];
@@ -91,6 +92,10 @@
     }
 }
 
+- (void)webViewDidFinishLoad:(UIWebView *)webView {
+
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -99,6 +104,9 @@
 - (IBAction)wkdemoclick:(UIButton *)sender {
     XDViewController_WK *vc = [[XDViewController_WK alloc] init];
     [self.navigationController pushViewController:vc animated:YES];
+}
+- (IBAction)nativeBtnClick:(UIButton *)sender {
+    [_bridge callAction:@"nativeClick" param:@{@"msg":@"I am from native"}];
 }
 
 

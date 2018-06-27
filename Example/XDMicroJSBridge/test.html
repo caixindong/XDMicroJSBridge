@@ -18,10 +18,13 @@
                 }
             });
         }
+        function nativeClick(info) {
+            alert(info['msg']);
+        }
     </script>
 </head>
 <body>
-    <h1>Test</h1>
+    <h1>XDMicroJSBridge</h1>
     <button onclick='clickcamera()'>打开相机</button>
     <div id='insert'></div>
 </body>

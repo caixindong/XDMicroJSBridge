@@ -15,6 +15,7 @@ typedef void(^XDMCJSBHandle)(NSArray *params, XDMCJSBCallback callback);
 //为注入的方法设置命名空间，默认是XDMCBridge
 @property (nonatomic, copy) NSString *nameSpace;
 
+//获取WKWebView对象，对象具体设置可以看源码
 - (WKWebView *)getBridgeWebView;
 
 /**
