@@ -4,7 +4,7 @@
 [![Version](https://img.shields.io/cocoapods/v/XDMicroJSBridge.svg?style=flat)](http://cocoapods.org/pods/XDMicroJSBridge)
 [![License](https://img.shields.io/cocoapods/l/XDMicroJSBridge.svg?style=flat)](http://cocoapods.org/pods/XDMicroJSBridge)
 [![Platform](https://img.shields.io/cocoapods/p/XDMicroJSBridge.svg?style=flat)](http://cocoapods.org/pods/XDMicroJSBridge)                        
-A most simple iOS bridge for communication between Obj-C and JavaScript in UIWebViews
+A most simple iOS bridge for communication between Obj-C and JavaScript
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
@@ -21,11 +21,20 @@ pod 'XDMicroJSBridge'
 ## Usage
 ### Init bridge
 ```objC
+//if you use UIWebView
 #import "XDMicroJSBridge.h"
 @property (nonatomic, strong) UIWebView *webview;
 @property (nonatomic, strong) XDMicroJSBridge *bridge;
 @property (nonatomic, copy) XDMCJSBCallback callback;
 self.bridge = [XDMicroJSBridge bridgeForWebView:_webview];
+//if you use WKWebView
+#import "XDMicroJSBridge_WK.h"
+@property (nonatomic, strong) WKWebView *webView;
+@property (nonatomic, strong) XDMicroJSBridge_WK *bridge;
+@property (nonatomic, copy) XDMCJSBCallback callback;
+self.bridge = [[XDMicroJSBridge_WK alloc] init];
+//important tips
+self.webView = [_bridge getBridgeWebView];
 ```
 ### Register methods
 ```objC
