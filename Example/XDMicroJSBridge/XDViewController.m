@@ -57,6 +57,8 @@
 - (void)_initBridge {
     self.bridge = [XDMicroJSBridge bridgeForWebView:_webview];
     
+    _bridge.nameSpace = @"xxxxx";
+    
     __weak typeof(self) weakself = self;
     [_bridge registerAction:@"camerapicker" handler:^(NSArray *params, XDMCJSBCallback callback) {
         dispatch_async(dispatch_get_main_queue(), ^{

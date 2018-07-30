@@ -1,5 +1,5 @@
 PODS:
-  - XDMicroJSBridge (0.2.1)
+  - XDMicroJSBridge (0.3.0)
 
 DEPENDENCIES:
   - XDMicroJSBridge (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  XDMicroJSBridge: 729b5de1d9584569e80cca20dc5440da31e0414d
+  XDMicroJSBridge: 3873525020581f59f5dac4fbaf4d92c3d18631a8
 
 PODFILE CHECKSUM: 79c2c0336055aae9b82221aa5df47635b98b6af4
 

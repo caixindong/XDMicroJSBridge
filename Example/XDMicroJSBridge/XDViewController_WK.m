@@ -34,6 +34,7 @@
     
     self.bridge = [[XDMicroJSBridge_WK alloc] init];
     self.webView = [_bridge getBridgeWebView];
+    _bridge.nameSpace = @"xxxxx";
     _webView.UIDelegate = self;
     _webView.navigationDelegate = self;
     _webView.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
@@ -135,6 +136,11 @@
 
     }
 }
+
+- (void)dealloc {
+    NSLog(@"===========wk dealoc============");
+}
+
 
 #pragma mark - WKNavigationDelegate
 - (void)webViewWebContentProcessDidTerminate:(WKWebView *)webView {

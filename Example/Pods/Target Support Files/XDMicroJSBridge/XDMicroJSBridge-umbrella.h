@@ -11,6 +11,7 @@
 #endif
 
 #import "XDMicroJSBridge.h"
+#import "XDMicroJSBridge_WK.h"
 
 FOUNDATION_EXPORT double XDMicroJSBridgeVersionNumber;
 FOUNDATION_EXPORT const unsigned char XDMicroJSBridgeVersionString[];

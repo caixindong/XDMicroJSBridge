@@ -1,0 +1,31 @@
+{
+  "name": "WBAPMCollection",
+  "version": "0.1.3",
+  "summary": "A short description of WBAPMCollection.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "http://git.weoa.com/danecai/WBAPMCollection",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "danecai@webank.com": "danecai@webank.com"
+  },
+  "source": {
+    "git": "git@git.weoa.com:danecai/WBAPMCollection.git",
+    "tag": "0.1.3"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "WBAPMCollection/Classes/**/*",
+  "public_header_files": "WBAPMCollection/Classes/WBAPMCollection.h",
+  "dependencies": {
+    "YTKKeyValueStore": [
+
+    ],
+    "FBRetainCycleDetector": [
+
+    ]
+  }
+}

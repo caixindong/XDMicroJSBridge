@@ -36,6 +36,8 @@ self.bridge = [XDMicroJSBridge bridgeForWebView:_webview];
 self.bridge = [[XDMicroJSBridge_WK alloc] init];
 ////important tips
 self.webView = [_bridge getBridgeWebView];
+//设置命名空间，注意顺序，必须在getBridgeWebView之后调用才能生效
+_bridge.nameSpace = @"xxxxx";
 ```
 ### Register methods
 ```objC

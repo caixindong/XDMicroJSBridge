@@ -141,7 +141,7 @@ static NSString *patternJS = @"%@.%@=function(){var a=arguments.length,e={method
     [_webview.configuration.userContentController removeScriptMessageHandlerForName:@"XDWKJB"];
     [_webview.configuration.userContentController removeAllUserScripts];
     [_jsValueDict removeAllObjects];
-    NSLog(@"========================XDMicroJSBridge_WKdealloc========================");
+    NSLog(@"========================XDMicroJSBridge_WK dealloc========================");
 }
 
 @end
